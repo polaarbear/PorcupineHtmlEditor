@@ -8,19 +8,23 @@
 <p>
 <ol>
 <li>
-Add links to the QuillJS style sheet that is relevant to the theme that you are using
+In your _Layout.cshtml, place links to the QuillJS style sheet that matches the theme you are using, either by linking to the files directly, or downloading them and loading them into your local project
 
-Snow Theme
+Snow Theme is available at:
 
-```<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">```
-			
-Bubble Theme
+	https://cdn.quilljs.com/1.3.6/quill.snow.css
+	
+Bubble Theme is available at:
 
-```<link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">```
+	https://cdn.quilljs.com/1.3.6/quill.bubble.css
 </li>
 <li>
-Attach the script for the QuillJS library
-```<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>```
+At the end of the same file (_Layout.cshtml), attach the QuillJS JavaScript library, again by linking to the file source directly, or by downloading it into your own project.
+	
+The QuillJS JavaScript files are available at:
+	
+	https://cdn.quilljs.com/1.3.6/quill.js
+	
 </li>
 </ol>
 </p>
