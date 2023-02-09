@@ -33,7 +33,7 @@ namespace Porcupine.Components
         public string Border { get; set; } = "1px solid #B3B3B3";
 
         [Parameter]
-        public string BorderRadius { get; set; } = "0rem";
+        public string BorderRadius { get; set; } = ".25rem";
 
         [Parameter]
         public string DefaultMessage { get; set; } = "Some porcupine quills are up to a foot long!";
@@ -42,9 +42,8 @@ namespace Porcupine.Components
         {
             if (firstRender)
             {
-                await _JS!.InvokeVoidAsync("startPorcupine", new string[] { ActiveTheme.ToString().ToLower(), DefaultMessage, Border, Width });
+                await _JS!.InvokeVoidAsync("startPorcupine", new string[] { ActiveTheme.ToString().ToLower(), DefaultMessage, Border, BorderRadius });
             }
-
         }
 
         public async Task<string> GetPorcupineText()

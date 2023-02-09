@@ -7,14 +7,17 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Description>This package wraps and initializes the QuillJS text editor as a Blazor component</Description>
-    <Copyright>Feb. 9 2023</Copyright>
-    <PackageIcon>PorcupineIcon.png</PackageIcon>
+    <Description>This package wraps the QuillJS text editor and initializes it as a Blazor component</Description>
+    <Copyright>R4DH4TT3R - Feb. 9 2023</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/polaarbear/Porcupine</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>Blazor; C#; JavaScript;Text Editor;</PackageTags>
+    <PackageTags>Blazor;C#;JavaScript;Text Editor;</PackageTags>
     <PackageProjectUrl>https://github.com/polaarbear/Porcupine</PackageProjectUrl>
+    <Title>Porcupine</Title>
+    <Version>0.0.1-a1</Version>
+    <Authors>Aaron J. Smith</Authors>
+    <Company>R4DH4TT3R</Company>
   </PropertyGroup>
 
 
@@ -32,19 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\OneDrive\Pictures\PorcupineIcon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="wwwroot\css\porcupine_layout.css">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\css\porcupine_style.css">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Update="wwwroot\js\porcupine.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Code</SubType>
