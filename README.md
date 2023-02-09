@@ -10,10 +10,10 @@ Add links to the QuillJS style sheet that is relevant to the theme that you are 
 
 Snow Theme
 
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+```<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">```
 			
 Bubble Theme
 
-<link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+```<link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">```
 
 </p>
