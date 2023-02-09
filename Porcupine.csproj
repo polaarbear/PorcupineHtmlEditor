@@ -4,6 +4,17 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>This package wraps and initializes the QuillJS text editor as a Blazor component</Description>
+    <Copyright>Feb. 9 2023</Copyright>
+    <PackageIcon>PorcupineIcon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/polaarbear/Porcupine</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Blazor; C#; JavaScript;Text Editor;</PackageTags>
+    <PackageProjectUrl>https://github.com/polaarbear/Porcupine</PackageProjectUrl>
   </PropertyGroup>
 
 
@@ -21,6 +32,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\..\OneDrive\Pictures\PorcupineIcon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="wwwroot\css\porcupine_layout.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -31,6 +49,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Code</SubType>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

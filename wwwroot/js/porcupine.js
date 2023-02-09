@@ -1,11 +1,19 @@
 ﻿
 var porcupine;
 
-function startPorcupine(porcupineTheme, porcupineDefaultMessage) {
+function startPorcupine(porcupineTheme, porcupineDefaultMessage, border, width) {
     porcupine = new Quill('#porcupineEditor', {
         theme: porcupineTheme,
         placeholder: porcupineDefaultMessage
     });
+    setToolbarBorder(border, width);
+}
+
+function setToolbarBorder(border, width) {
+    var toolBar = document.getElementsByClassName("ql-toolbar")[0];
+    if (toolBar) {
+        toolBar.style.border = border;
+    }
 }
 
 function getPorcupineText() {

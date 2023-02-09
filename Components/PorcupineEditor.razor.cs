@@ -30,10 +30,10 @@ namespace Porcupine.Components
         public string Padding { get; set; } = "0px";
 
         [Parameter]
-        public string Border { get; set; } = "1px solid #666666";
+        public string Border { get; set; } = "1px solid #B3B3B3";
 
         [Parameter]
-        public string BorderRadius { get; set; } = ".25rem";
+        public string BorderRadius { get; set; } = "0rem";
 
         [Parameter]
         public string DefaultMessage { get; set; } = "Some porcupine quills are up to a foot long!";
@@ -41,7 +41,10 @@ namespace Porcupine.Components
         protected async override Task OnAfterRenderAsync(bool firstRender)
         {
             if (firstRender)
-                await _JS!.InvokeVoidAsync("startPorcupine", new string[] { ActiveTheme.ToString().ToLower(), DefaultMessage });
+            {
+                await _JS!.InvokeVoidAsync("startPorcupine", new string[] { ActiveTheme.ToString().ToLower(), DefaultMessage, Border, Width });
+            }
+
         }
 
         public async Task<string> GetPorcupineText()
