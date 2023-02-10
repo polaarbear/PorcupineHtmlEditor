@@ -173,4 +173,4 @@ Get a reference to the editor in your @code block or CodeBehind file
 </ul>
 
 
-<h3>This should be everything you need to get basic editor functionality working in a Blazor app!</h3>
+<h4>This should be everything you need to get the Porcupine editor working in a Blazor app!</h3>
