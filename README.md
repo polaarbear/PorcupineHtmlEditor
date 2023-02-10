@@ -40,7 +40,7 @@ At the end of the same file, reference the QuillJS library.
 
 <h3><strong>Set up Porcupine</strong></h3>
 <p>
-<h4>Download Porcupine.zip from the Releases page.</h4>
+<h4>Download a .zip of the latest version from the <a href="https://github.com/polaarbear/Porcupine/releases">Releases</a> page.</h4>
 <h4>Extract Porcupine.dll into a folder with any other pre-compiled libraries you may have</h4>
 <h4>Extract porcupine.js into your project's wwwroot</h4>
 </p>
