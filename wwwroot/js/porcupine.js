@@ -1,11 +1,14 @@
 ﻿
 var porcupine;
+var porcupineEditor;
 
 function startPorcupine(porcupineTheme, porcupineDefaultMessage, border, radius) {
-    porcupine = new Quill('#porcupineEditor', {
+    
+    porcupineEditor = new Quill('#porcupineEditor', {
         theme: porcupineTheme,
-        placeholder: porcupineDefaultMessage
+        placeholder: porcupineDefaultMessage,
     });
+    porcupine = document.getElementById('porcupine');
     setToolbarBorder(border, radius);
 }
 
@@ -32,4 +35,15 @@ function setPorcupineText(text) {
 
 function setPorcupineHTML(html) {
     porcupine.root.innerHTML = html;
+}
+
+function showPorcupine() {
+    if (porcupine)
+        porcupine.style.display = 'block';
+}
+
+function hidePorcupine() {
+    if (porcupine) {
+        porcupine.style.display = 'none';
+    }
 }

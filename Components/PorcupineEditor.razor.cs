@@ -23,6 +23,38 @@ namespace Porcupine.Components
         [Parameter]
         public string Height { get; set; } = "100%";
 
+        private string _EditorHeight
+        {
+            get
+            {
+                string padding = "";
+                string unit = "";
+                for(int character = 0; character < Padding.Length; character++)
+                {
+                    int thisNum = -1;
+                    if (int.TryParse(Padding[character].ToString(), out thisNum))
+                    {
+                        padding += thisNum.ToString();
+                    }
+                    else if (Padding[character] == '.')
+                    {
+                        padding += ".";
+                    }
+                    else
+                    {
+                        unit += Padding[character];
+                    }
+                }
+                float halfPadding = -1f;
+                float.TryParse(padding, out halfPadding);
+                if(halfPadding > 0f)
+                {
+                    padding = (halfPadding * 2f).ToString() + unit.ToString(); ;
+                }
+                return "calc(100% - 42px - " + padding + ")";
+            }
+        }
+
         [Parameter]
         public string Width { get; set; } = "100%";
 
@@ -69,6 +101,16 @@ namespace Porcupine.Components
         public async Task SetPorcupineHTML(string html)
         {
             await _JS!.InvokeVoidAsync("setPorcupineHTML", html);
+        }
+
+        public async Task HidePorcupine()
+        {
+            await _JS!.InvokeVoidAsync("hidePorcupine");
+        }
+
+        public async Task ShowPorcupine()
+        {
+            await _JS!.InvokeVoidAsync("showPorcupine");
         }
     }
 }
