@@ -1,5 +1,5 @@
 # Porcupine
- A Blazor component that wraps the QuillJS text editor.
+ An easy to use Blazor component that wraps QuillJS to enable WYSIWIG style text editing.
  
  Allows direct modification of CSS properties without requiring any additional CSS frameworks
 
@@ -36,3 +36,24 @@ At the end of the same file, reference the QuillJS library.
 </ol>
 
 <h3><strong>Set up Porcupine</strong></h3>
+<p>
+<h4>Download the Porcupine.zip file from the Releases page.</h4>
+<h4>Extract Porcupine.dll into a folder with any other pre-compiled libraries you may have, and extract porcupine.js into your project's wwwroot</h4>
+</p>
+<ol>
+<li>
+Add a reference to the Porcupine.dll assembly
+<p align="center">	
+<img height="228px" src="https://user-images.githubusercontent.com/9713177/218158429-57717509-d817-4363-9f08-a8087cd2d632.png" />
+<img height="228px" src="https://user-images.githubusercontent.com/9713177/218158436-8821f0b3-a40e-4274-a404-48e596f90362.png" />
+</p>
+</li>
+<li>
+Add a reference to the porcupine.js file beneath the quill.js reference
+<p>
+<img src="https://user-images.githubusercontent.com/9713177/218159906-62f0c532-2a47-4a87-8438-9477e3d0a775.png" />
+</p>
+</li>
+</ol>
+
+<h3><strong>Using Porcupine</strong></h3>
