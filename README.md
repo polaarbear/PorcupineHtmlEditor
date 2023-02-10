@@ -14,15 +14,18 @@
 <ol>
 <li>
 In your .cshtml (Blazor Server) or .html file (WASM), reference one (or both) of the QuillJS themes.
+
+Porcupine supports the "Snow" and "Bubble" themes.
+	
 <p>
 	<img src="https://user-images.githubusercontent.com/9713177/218155253-3df3a9d2-d9d9-4740-92ec-6a34a8178f5f.png" />
 </p>
 
 	https://cdn.quilljs.com/1.3.6/quill.snow.css
 	
-	https://cdn.quilljs.com/1.3.6/quill.bubble.css
+	https://cdn.quilljs.com/1.3.6/quill.bubble.css	
 	
-Porcupine supports the "Snow" and "Bubble" themes.
+
 </li>
 <li>
 At the end of the same file, reference the QuillJS library.	
@@ -37,8 +40,9 @@ At the end of the same file, reference the QuillJS library.
 
 <h3><strong>Set up Porcupine</strong></h3>
 <p>
-<h4>Download the Porcupine.zip file from the Releases page.</h4>
-<h4>Extract Porcupine.dll into a folder with any other pre-compiled libraries you may have, and extract porcupine.js into your project's wwwroot</h4>
+<h4>Download Porcupine.zip from the Releases page.</h4>
+<h4>Extract Porcupine.dll into a folder with any other pre-compiled libraries you may have</h4>
+<h4>Extract porcupine.js into your project's wwwroot</h4>
 </p>
 <ol>
 <li>
@@ -73,7 +77,7 @@ Add a reference to Microsoft.JSInterop if you don't have it already.
 </p>
 <ul>
 <li>
-Add the editor to your Blazor page with the tag PorcupineEditor tag
+Add the editor to your Blazor page with the PorcupineEditor tag
 <p>
 <img src="https://user-images.githubusercontent.com/9713177/218163089-ed72444d-0b1d-4653-a718-42ed1a2ab280.png" />
 <p>
@@ -81,37 +85,50 @@ The control exposes a number of properties that can be overridden.  Most use sta
 </p>
 <ul>
 <li>
-ActiveTheme - Enum - PorcupineTheme.SNOW or PorcupineTheme.BUBBLE
+ActiveTheme - Enum
+	
+PorcupineTheme.SNOW or PorcupineTheme.BUBBLE
+	
+DEFAULT: PorcupineTheme.SNOW
 </li>
 <li>
-Class - Overrides the main editor CSS class - MAY OVERRIDE OTHER DEFAULT STYLING, USE WITH CAUTION
+Class - String
+
+Overrides the main editor CSS class - MAY OVERRIDE OTHER DEFAULT STYLING, USE WITH CAUTION
 </li>
 <li>
 Height - Accepts standard CSS strings
+	
 DEFAULT: 100%, editor will fill container that it is placed in
 </li>
 <li>
 Width - Accepts standard CSS strings
+	
 DEFAULT: 100%, editor will fill container that it is placed in
 </li>
 <li>
 Margin - Accepts standard CSS strings
+	
 DEFAULT: 0px
 </li>
 <li>
 Padding - Accepts standard CSS strings
+	
 DEFAULT: 0px
 </li>
 <li>
 Border - Accepts standard CSS strings
+	
 DEFAULT: 1px solid #B3B3B3
 </li>
 <li>
 BorderRadius - Accepts standard CSS strings
+	
 DEFAULT: .25rem
 </li>
 <li>
 DefaultMessage - Accepts a string - the same as html placeholder
+	
 DEFAULT: "Some porcupine quills are up to 12 inches long!";
 </li>
 <ul>
