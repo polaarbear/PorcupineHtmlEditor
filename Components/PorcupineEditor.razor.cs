@@ -15,7 +15,10 @@ namespace Porcupine.Components
         }
 
         [Parameter]
-        public PorcupineTheme ActiveTheme { get; set; } = PorcupineTheme.SNOW;   
+        public PorcupineTheme ActiveTheme { get; set; } = PorcupineTheme.SNOW;
+
+        [Parameter]
+        public string Class { get; set; } = "";
 
         [Parameter]
         public string Height { get; set; } = "100%";
@@ -36,7 +39,7 @@ namespace Porcupine.Components
         public string BorderRadius { get; set; } = ".25rem";
 
         [Parameter]
-        public string DefaultMessage { get; set; } = "Some porcupine quills are up to a foot long!";
+        public string DefaultMessage { get; set; } = "Some porcupine quills are up to 12 inches long!";
 
         protected async override Task OnAfterRenderAsync(bool firstRender)
         {
