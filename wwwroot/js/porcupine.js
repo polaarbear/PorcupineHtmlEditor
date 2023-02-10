@@ -3,7 +3,7 @@ var porcupine;
 var porcupineEditor;
 
 function startPorcupine(porcupineTheme, porcupineDefaultMessage, border, radius) {
-    
+
     porcupineEditor = new Quill('#porcupineEditor', {
         theme: porcupineTheme,
         placeholder: porcupineDefaultMessage,
@@ -22,24 +22,33 @@ function setToolbarBorder(border, radius) {
 }
 
 function getPorcupineText() {
-    return porcupine.getText();
+    if (porcupineEditor) {
+        return porcupineEditor.getText();
+    }
 }
 
 function getPorcupineHTML() {
-    return porcupine.root.innerHTML;
+    if (porcupineEditor) {
+        return porcupineEditor.root.innerHTML;
+    }
 }
 
 function setPorcupineText(text) {
-    porcupine.setText(text, 'silent');
+    if (porcupineEditor) {
+        porcupineEditor.setText(text, 'silent');
+    }
 }
 
 function setPorcupineHTML(html) {
-    porcupine.root.innerHTML = html;
+    if (porcupineEditor) {
+        porcupineEditor.root.innerHTML = html;
+    }
 }
 
 function showPorcupine() {
-    if (porcupine)
+    if (porcupine) {
         porcupine.style.display = 'block';
+    }
 }
 
 function hidePorcupine() {
