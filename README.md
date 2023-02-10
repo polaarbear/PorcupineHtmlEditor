@@ -10,18 +10,18 @@
 <li>
 In your _Layout.cshtml, place links to the QuillJS style sheet that matches the theme you are using, either by linking to the files directly, or downloading them and loading them into your local project
 
-Snow Theme is available at:
+Use a <i>link</i> tag to load the QuillJS Snow theme available at:
 
 	https://cdn.quilljs.com/1.3.6/quill.snow.css
 	
-Bubble Theme is available at:
+Use a <i>link</i> tag to load the QuillJS Bubble theme available at:
 
 	https://cdn.quilljs.com/1.3.6/quill.bubble.css
 </li>
 <li>
 At the end of the same file (_Layout.cshtml), attach the QuillJS JavaScript library, again by linking to the file source directly, or by downloading it into your own project.
 	
-The QuillJS JavaScript files are available at:
+Use a <i>script</i> tag to load the QuillJS JavaScript files available at:
 	
 	https://cdn.quilljs.com/1.3.6/quill.js
 	
@@ -29,7 +29,7 @@ The QuillJS JavaScript files are available at:
 <li>
 At the end of the same file (_Layout.cshtml), attach the Porcupine JavaScript library, it is included in the content directory of the Nuget package.
 
-Link it via the source location:
+Use a <i>script</i> tag to load the Porcupine JavaScript files located at:
 
 	_content/Porcupine/js/porcupine.js
 </li>
