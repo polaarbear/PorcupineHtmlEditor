@@ -10,11 +10,11 @@
 <li>
 In your _Layout.cshtml, place links to the QuillJS style sheet that matches the theme you are using, either by linking to the files directly, or downloading them and loading them into your local project
 
-Use a <i>link</i> tag to load the QuillJS Snow theme available at:
+If using the QuillJS Snow theme, use a <i>link</i> tag to load it from:
 
 	https://cdn.quilljs.com/1.3.6/quill.snow.css
 	
-Use a <i>link</i> tag to load the QuillJS Bubble theme available at:
+If using the QuillJS Bubble theme, use a <i>link</i> tag to load it from:
 
 	https://cdn.quilljs.com/1.3.6/quill.bubble.css
 </li>
