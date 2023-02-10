@@ -37,7 +37,7 @@ Link it via the source location:
 The end result in a fresh project would look something like this
 
  <p align="center">
-	<img width="570" height="292" src="https://user-images.githubusercontent.com/9713177/217963461-157a695e-4661-4e5f-a77b-22b9eb4462d6.png" />
+	<img width="570" height="292" src="https://user-images.githubusercontent.com/9713177/217970965-679e0354-ba1b-4726-abc6-0beb00143d01.png" />
  </p>
 </li>
 </ol>
