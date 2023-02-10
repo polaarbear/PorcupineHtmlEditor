@@ -73,7 +73,7 @@ Add a reference to Microsoft.JSInterop if you don't have it already.
 
 <h3><strong>Using Porcupine</strong></h3>
 <p>
-<h4>Porcupine is ready to use</h4>
+<h4>Insert the Editor</h4>
 </p>
 <ul>
 <li>
@@ -135,3 +135,42 @@ DEFAULT: "Some porcupine quills are up to 12 inches long!";
 </p>
 </li>
 </ul>
+
+<p>
+<h4>Retrieving Data from Editor</h4>
+<h4>Porcupine supports two methods of retrieving data from the editor</h4>
+<h4>Retrieving text is an async process due to the nature of JSInterop in Blazor</h4>
+</p>
+<ol>
+<li>
+Get a reference to the editor in your @code block or CodeBehind file
+<p>
+<img src="https://user-images.githubusercontent.com/9713177/218168678-00d53f47-84d7-4fa7-920e-38c7f9a62269.png" />
+</p>
+</li>
+</ol>
+<ul>
+<li>
+<strong>Retrieve Editor Text</strong>
+	
+	string plainText = await _Porcupine.GetPorcupineText();
+</li>
+<li>
+<strong>Retrieve Editor HTML</strong>
+	
+	string html = await _Porcupine.GetPorcupineHTML();
+</li>
+	<li>
+<strong>Set Editor Text</strong>
+	
+	string html = await _Porcupine.SetPorcupineText("SetPorcupineText");
+</li>
+	<li>
+<strong>Set Editor HTML</strong>
+	
+	string html = await _Porcupine.GetPorcupineHTML("<bold>Set Porcupine HTML</bold>");
+</li>
+</ul>
+
+
+<h3>This should be everything you need to get basic editor functionality working in a Blazor app!</h3>
