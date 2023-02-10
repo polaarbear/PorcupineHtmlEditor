@@ -44,6 +44,7 @@ At the end of the same file, reference the QuillJS library.
 <h4>Extract Porcupine.dll into a folder with any other pre-compiled libraries you may have</h4>
 <h4>Extract porcupine.js into your project's wwwroot</h4>
 </p>
+
 <ol>
 <li>
 Add a reference to the Porcupine.dll assembly
@@ -80,6 +81,7 @@ Add a reference to Microsoft.JSInterop if you don't have it already.
 Add the editor to your Blazor page with the PorcupineEditor tag
 <p>
 <img src="https://user-images.githubusercontent.com/9713177/218163089-ed72444d-0b1d-4653-a718-42ed1a2ab280.png" />
+</p>
 <p>
 The control exposes a number of properties that can be overridden.  Most use standard CSS strings
 </p>
@@ -131,15 +133,12 @@ DefaultMessage - Accepts a string - the same as html placeholder
 	
 DEFAULT: "Some porcupine quills are up to 12 inches long!";
 </li>
-<ul>
-</p>
-</li>
 </ul>
+	</ul>
 
 <p>
-<h4>Retrieving Data from Editor</h4>
-<h4>Porcupine supports two methods of retrieving data from the editor</h4>
-<h4>Retrieving text is an async process due to the nature of JSInterop in Blazor</h4>
+<h3>Retrieving data from Porcupine</h3>
+<h4>Porcupine supports two methods of retrieving data from the editor (PlainText and HTML)</h4>
 </p>
 <ol>
 <li>
