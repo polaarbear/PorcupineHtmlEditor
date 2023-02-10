@@ -1,44 +1,38 @@
 # Porcupine
- A Blazor component that wraps the QuillJS text editor
+ A Blazor component that wraps the QuillJS text editor.
+ 
+ Allows direct modification of CSS properties without requiring any additional CSS frameworks
 
  <p align="center">
 	<img width="256" height="256" src="https://user-images.githubusercontent.com/9713177/217947860-3e629e3e-67c0-4478-9570-94948932bd1c.png" />
  </p>
 
+<h3><strong>Set up the QuillJS Dependency</strong></h3>
 <p>
+<h4>You can link to the files from the QuillJS CDN or download them and reference them from your own project.</h4>
+</p>
 <ol>
 <li>
-In your _Layout.cshtml, place links to the QuillJS style sheet that matches the theme you are using, either by linking to the files directly, or downloading them and loading them into your local project
-
-If using the QuillJS Snow theme, use a <i>link</i> tag to load it from:
+In your .cshtml (Blazor Server) or .html file (WASM), reference one (or both) of the QuillJS themes.
+<p>
+	<img src="https://user-images.githubusercontent.com/9713177/218155253-3df3a9d2-d9d9-4740-92ec-6a34a8178f5f.png" />
+</p>
 
 	https://cdn.quilljs.com/1.3.6/quill.snow.css
 	
-If using the QuillJS Bubble theme, use a <i>link</i> tag to load it from:
-
 	https://cdn.quilljs.com/1.3.6/quill.bubble.css
+	
+Porcupine supports the "Snow" and "Bubble" themes.
 </li>
 <li>
-At the end of the same file (_Layout.cshtml), attach the QuillJS JavaScript library, again by linking to the file source directly, or by downloading it into your own project.
-	
-Use a <i>script</i> tag to load the QuillJS JavaScript files available at:
-	
+At the end of the same file, reference the QuillJS library.	
+<p>
+	<img src="https://user-images.githubusercontent.com/9713177/218157241-fe1a3f82-743a-4d7a-9989-b6788124c42a.png" />
+</p>	
+
 	https://cdn.quilljs.com/1.3.6/quill.js
 	
 </li>
-<li>
-At the end of the same file (_Layout.cshtml), attach the Porcupine JavaScript library, it is included in the content directory of the Nuget package.
-
-Use a <i>script</i> tag to load the Porcupine JavaScript files located at:
-
-	_content/Porcupine/js/porcupine.js
-</li>
-<li>
-The end result in a fresh project would look something like this
-
- <p align="center">
-	<img width="570" height="292" src="https://user-images.githubusercontent.com/9713177/217970965-679e0354-ba1b-4726-abc6-0beb00143d01.png" />
- </p>
-</li>
 </ol>
-</p>
+
+<h3><strong>Set up Porcupine</strong></h3>
