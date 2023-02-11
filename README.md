@@ -162,12 +162,12 @@ Get a reference to the editor in your @code block or CodeBehind file
 	<li>
 <strong>Set Editor Text</strong>
 	
-	string html = await _Porcupine.SetPorcupineText("SetPorcupineText");
+	await _Porcupine.SetPorcupineText("SetPorcupineText");
 </li>
 	<li>
 <strong>Set Editor HTML</strong>
 	
-	string html = await _Porcupine.GetPorcupineHTML("<bold>Set Porcupine HTML</bold>");
+	await _Porcupine.GetPorcupineHTML("<bold>Set Porcupine HTML</bold>");
 </li>
 </ul>
 
