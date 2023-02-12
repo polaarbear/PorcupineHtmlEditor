@@ -1,0 +1,62 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<div style="position:fixed; width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+    <div style="width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center;">
+        <button @onclick="(() => _TestMode = TestMode.CONTENT)">Content</button>
+        <button @onclick="(() => _TestMode = TestMode.EDITOR)">Editor</button>
+        <button @onclick="(() => _TestMode = TestMode.FORMAT)">Format</button>
+        <button @onclick="(() => _TestMode = TestMode.SELECTION)">Selection</button>
+    </div>
+    <PorcupineEditor @ref="@_Editor"
+                     Id="PorcupineTest"
+                     ActiveTheme="PorcupineEditor.PorcupineTheme.SNOW"
+                     Height="30%"
+                     Width="20%"
+                     Border="1px solid #B3B3B3"
+                     BorderRadius=".25rem"
+                     DefaultMessage="Some porcupine quills are up to 12 inches long."
+                     Margin="0px"
+                     Padding=".25rem" />
+
+    <div style="margin-top: 1rem;">
+        @switch (_TestMode)
+        {
+            case TestMode.CONTENT:
+                <button @onclick="GetLength">Get Length</button>
+                <button @onclick="GetHTML">Get HTML</button>
+                <button @onclick="SetHTML">Set HTML</button>
+                <button @onclick="GetText">Get Text</button>
+                <button @onclick="SetText">Set Text</button>
+                <button @onclick="DeleteText">Delete Text</button>
+                <button @onclick="InsertImage">Insert Image</button>
+                <button @onclick="InsertText">Insert Text</button>
+                break;
+            case TestMode.EDITOR:
+                <button @onclick="HidePorcupine">Hide Porcupine</button>
+                <button @onclick="ShowPorcupine">Show Porcupine</button>
+                <button @onclick="ClearFocus">Clear Focus</button>
+                <button @onclick="GrabFocus">Grab Focus</button>
+                <button @onclick="IsFocused">Is Focused?</button>
+                <button @onclick="EnablePorcupine">Enable Porcupine</button>
+                <button @onclick="DisablePorcupine">Disable Porcupine</button>
+                break;
+            case TestMode.FORMAT:
+                <button @onclick="FormatSelection">Format Selection</button>
+                <button @onclick="FormatText">Format Text</button>
+                <button @onclick="ClearFormat">Clear Format</button>
+                break;
+            case TestMode.SELECTION:
+                <button @onclick="GetBounds">Get Bounds</button>
+                <button @onclick="GetSelection">Get Selection</button>
+                <button @onclick="SetSelection">Set Selection</button>
+                break;
+            default:
+                <span>NO SELECTION????</span>
+                break;
+        }
+
+    </div>
+</div>

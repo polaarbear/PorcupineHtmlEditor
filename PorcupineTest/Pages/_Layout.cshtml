@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@namespace PorcupineTest.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+
+    <!--QuillJS Style Sheet-->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <link href="~/css/porcupine_test.css" rel="stylesheet" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+    @RenderBody()
+    <script src="_framework/blazor.server.js"></script>
+
+    <!--QuillJS Library-->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <!--Porcupine JavaScript Library-->
+    <script src="_content/PorcupineComponent/js/porcupine.js"></script>
+
+</body>
+</html>
