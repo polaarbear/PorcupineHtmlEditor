@@ -1,5 +1,5 @@
 # Porcupine HTML Editor
- An easy to use Blazor component that wraps QuillJS to enable WYSIWIG style HTML editing in Blazor apps.
+ A Blazor component that wraps QuillJS to enable WYSIWIG style HTML editing in Blazor apps.
  
  Allows direct modification of CSS properties without requiring any additional CSS frameworks
 
@@ -41,28 +41,26 @@ At the end of the same file, reference the QuillJS library.
 <h3><strong>Set up Porcupine</strong></h3>
 <p>
 <h4>Download a .zip of the latest version from the <a href="https://github.com/polaarbear/Porcupine/releases">Releases</a> page.</h4>
-<h4>Extract Porcupine.dll into a folder with any other pre-compiled libraries you may have</h4>
-<h4>Extract porcupine.js into your project's wwwroot</h4>
 </p>
 
 <ol>
 <li>
-Add a reference to the Porcupine.dll assembly
+<h4>Extract the PorcupineComponent.dll into a folder with any other pre-compiled libraries you may have</h4>
+Add a reference to the assembly	
 <p>	
-<img height="228px" src="https://user-images.githubusercontent.com/9713177/218158429-57717509-d817-4363-9f08-a8087cd2d632.png" />
-<img height="228px" src="https://user-images.githubusercontent.com/9713177/218158436-8821f0b3-a40e-4274-a404-48e596f90362.png" />
+<img height="228px" src="https://user-images.githubusercontent.com/9713177/218333678-a5f32676-ec4e-470d-8d5a-b4de93871414.png" />
 </p>
 </li>
 <li>
-Add a reference to the porcupine.js file beneath the quill.js reference
+<h4>Extract porcupine.js into your project's wwwroot</h4>
+Add a reference beneath the quill.js reference we created earlier
 <p>
 <img src="https://user-images.githubusercontent.com/9713177/218159906-62f0c532-2a47-4a87-8438-9477e3d0a775.png" />
 </p>
 </li>
 <li>
-Add the PorcupineHtmlEditor namespace to your _Imports.razor file.
-
-Add a reference to Microsoft.JSInterop if you don't have it already.
+<h4>Add the PorcupineHtmlEditor namespace to your _Imports.razor file.</h4>
+<h4>Add a reference to Microsoft.JSInterop if you don't have it already.</h4>
 <p>
 <img src="https://user-images.githubusercontent.com/9713177/218333357-49def814-54ff-4d3b-b9e4-785cc456b5bf.png" />
 </p>
@@ -141,9 +139,7 @@ DefaultMessage - Accepts a string - the same as html placeholder
 DEFAULT: "Some porcupine quills are up to 12 inches long!";
 </li>
 </ul>
-<h4>
-Reference the Editor
-</h4>
+<h4>Reference the Editor</h4>
 <li>
 Get a reference to the editor in your @code block or code-behind file
 </li>
@@ -164,25 +160,25 @@ Get a reference to the editor in your @code block or code-behind file
 	
 </li>
 <li>
-<strong>Retrieve Editor HTML</strong>
+<strong>Retrieve HTML</strong>
 	
 	string html = await _Porcupine.GetHTML();
 </li>
 <li>
-<strong>Set Editor HTML</strong>
+<strong>Set HTML</strong>
 	
 	await _Porcupine.SetHTML(string htmlString);
 	await _Porcupine.SetHTML(MarkupString markupString);
 </li>
 <li>
-<strong>Retrieve Editor Text</strong>
+<strong>Retrieve Text</strong>
 	
 	string fullText = await _Porcupine.GetText();
 	string textToEnd = await _Porcupine.GetText(int startIndex);
 	string partialText = await _Porcupine.GetText(int startIndex, int length);
 </li>
 <li>
-<strong>Set Editor Text</strong>
+<strong>Set Text</strong>
 	
 	await _Porcupine.SetText("SetPorcupineText");
 </li>
