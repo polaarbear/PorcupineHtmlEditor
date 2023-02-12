@@ -1,5 +1,5 @@
-# Porcupine
- An easy to use Blazor component that wraps QuillJS to enable WYSIWIG style text editing.
+# Porcupine HTML Editor
+ An easy to use Blazor component that wraps QuillJS to enable WYSIWIG style HTML editing in Blazor apps.
  
  Allows direct modification of CSS properties without requiring any additional CSS frameworks
 
@@ -134,42 +134,146 @@ DefaultMessage - Accepts a string - the same as html placeholder
 DEFAULT: "Some porcupine quills are up to 12 inches long!";
 </li>
 </ul>
-	</ul>
-
-<p>
-<h3>Retrieving data from Porcupine</h3>
-<h4>Porcupine supports two methods of retrieving data from the editor (PlainText and HTML)</h4>
-</p>
-<ol>
+<h4>
+Reference the Editor
+</h4>
 <li>
-Get a reference to the editor in your @code block or CodeBehind file
+Get a reference to the editor in your @code block or code-behind file
+</li>
 <p>
 <img src="https://user-images.githubusercontent.com/9713177/218168678-00d53f47-84d7-4fa7-920e-38c7f9a62269.png" />
 </p>
-</li>
-</ol>
+</ul>
+
+<p>
+<h3><strong>Content</strong></h3>
+</p>
+
 <ul>
 <li>
-<strong>Retrieve Editor Text</strong>
+<strong>Get HTML Length</strong>
+
+	int htmlLength = await _Porcupine.GetLength();
 	
-	string plainText = await _Porcupine.GetPorcupineText();
 </li>
 <li>
 <strong>Retrieve Editor HTML</strong>
 	
-	string html = await _Porcupine.GetPorcupineHTML();
+	string html = await _Porcupine.GetHTML();
 </li>
-	<li>
-<strong>Set Editor Text</strong>
-	
-	await _Porcupine.SetPorcupineText("SetPorcupineText");
-</li>
-	<li>
+<li>
 <strong>Set Editor HTML</strong>
 	
-	await _Porcupine.GetPorcupineHTML("<bold>Set Porcupine HTML</bold>");
+	await _Porcupine.SetHTML(string htmlString);
+	await _Porcupine.SetHTML(MarkupString markupString);
+</li>
+<li>
+<strong>Retrieve Editor Text</strong>
+	
+	string fullText = await _Porcupine.GetText();
+	string textToEnd = await _Porcupine.GetText(int startIndex);
+	string partialText = await _Porcupine.GetText(int startIndex, int length);
+</li>
+<li>
+<strong>Set Editor Text</strong>
+	
+	await _Porcupine.SetText("SetPorcupineText");
+</li>
+<li>
+<strong>Insert Text at Index</strong>
+
+	await _Porcupine.InsertText(int index, string text);
+</li>
+<li>
+<strong>Insert Image from URL</strong>
+
+	await _Porcupine.InsertImage(int index, string imageURL);
 </li>
 </ul>
 
 
-<h4>This should be everything you need to get the Porcupine editor working in a Blazor app!</h3>
+<p>
+<h3><strong>Editor</strong></h3>
+</p>
+
+<ul>
+<li>
+<strong>Show Porcupine</strong>
+
+	await _Porcupine.ShowPorcupine();
+	
+</li>
+<li>
+<strong>Hide Porcupine</strong>
+	
+	await _Porcupine.HidePorcupine();
+</li>
+<li>
+<strong>Clear Focus</strong>
+	
+	await _Porcupine.ClearFocus;
+</li>
+<li>
+<strong>Grab Focus</strong>
+	
+	await _Porcupine.GrabFocus();
+</li>
+<li>
+<strong>Is Porcupine Focused?</strong>
+	
+	bool isFocused = await _Porcupine.IsFocused();
+</li>
+<li>
+<strong>Enable Porcupine</strong>
+
+	await _Porcupine.EnablePorcupine();
+</li>
+<li>
+<strong>Disable Porcupine</strong>
+
+	await _Porcupine.DisablePorcupine();
+</li>
+</ul>
+
+<p>
+<h3><strong>Formatting<strong></h3>
+</p>
+
+<ul>
+<li>
+<strong>Format Selection</strong>
+
+	await _Porcupine.FormatSelection(string property, string value);
+<li>
+<strong>Format Text</strong>
+	
+	await _Porcupine.Text(int index, int length, string property, string value);
+</li>
+<li>
+<strong>Clear Format</strong>
+	
+	await _Porcupine.ClearFormat(int index, int length);
+</li>
+</ul>
+
+<p>
+<h3><strong>Selection<strong></h3>
+</p>
+
+<ul>
+<li>
+<strong>Get Bounds</strong>
+
+	JsonObject bounds = await _Porcupine.GetBounds(int index, int length);	
+</li>
+<li>
+<strong>Get Selection</strong>
+	
+	JsonObject selection = _Porcupine.GetSelection();
+</li>
+<li>
+<strong>Set Selection</strong>
+	
+	await _Porcupine.SetSelection(int index, int length);
+</li>
+</ul>
