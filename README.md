@@ -96,9 +96,10 @@ DEFAULT: PorcupineTheme.SNOW
 <li>
 Id - String
 
-Overrides the main editor Id
+Overrides the editor's HTML id
+	
+DEFAULT - "porcupineEditor" + randomly generated GUID
 </li>
-<li>
 <li>
 Class - String
 
