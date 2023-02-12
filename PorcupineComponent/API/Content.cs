@@ -5,7 +5,7 @@ namespace PorcupineHtmlEditor
 {
     public partial class PorcupineEditor
     {
-        public async Task<int> GetLength()
+        public async Task<int> GetHtmlLength()
         {
             return await _JS!.InvokeAsync<int>("getPorcupineLength", Id);
         }

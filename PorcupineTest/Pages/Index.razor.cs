@@ -16,7 +16,7 @@ namespace PorcupineTest.Pages
             SELECTION
         }
 
-        private TestMode _TestMode = TestMode.CONTENT;        
+        private TestMode _TestMode = TestMode.CONTENT;       
         
 
         #region Content
@@ -27,7 +27,7 @@ namespace PorcupineTest.Pages
 
         private async Task GetLength()
         {
-            int length = await _Editor!.GetLength();
+            int length = await _Editor!.GetHtmlLength();
         }
 
         private async Task GetHTML()
@@ -61,7 +61,6 @@ namespace PorcupineTest.Pages
         }
 
         #endregion
-
 
         #region Editor
 

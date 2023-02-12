@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Description>This package wraps the QuillJS text editor and initializes it as a Blazor component</Description>
     <Copyright>R4DH4TT3R - Feb. 9 2023</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
