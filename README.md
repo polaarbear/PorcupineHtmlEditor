@@ -60,14 +60,14 @@ Add a reference to the porcupine.js file beneath the quill.js reference
 </p>
 </li>
 <li>
-Add the Porcupine.Components namespace to your _Imports.razor file.
+Add the PorcupineHtmlEditor namespace to your _Imports.razor file.
 
 Add a reference to Microsoft.JSInterop if you don't have it already.
 <p>
-<img src="https://user-images.githubusercontent.com/9713177/218162011-49c2baac-60bd-45be-b81a-5ee05611956f.png" />
+<img src="https://user-images.githubusercontent.com/9713177/218333357-49def814-54ff-4d3b-b9e4-785cc456b5bf.png" />
 </p>
 
-	@using Porcupine.Components	
+	@using PorcupineHtmlEditor	
 	@using Microsoft.JSInterop
 </li>
 </ol>
@@ -93,6 +93,12 @@ PorcupineTheme.SNOW or PorcupineTheme.BUBBLE
 	
 DEFAULT: PorcupineTheme.SNOW
 </li>
+<li>
+Id - String
+
+Overrides the main editor Id
+</li>
+<li>
 <li>
 Class - String
 
