@@ -20,125 +20,174 @@ function setToolbarBorder(border, radius) {
 //CONTENT FUNCTIONS
 function getPorcupineLength(id) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    return porcupineEditor.getLength();
+    if (porcupineEditor) {        
+        return porcupineEditor.getLength();
+    }
+
 }
 
 function getPorcupineText(id) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    return porcupineEditor.getText();
+    if (porcupineEditor) {
+        return porcupineEditor.getText();
+    }
 }
 
 function getPorcupineText(id, index) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    return porcupineEditor.getText(index);
+    if (porcupineEditor) {
+        return porcupineEditor.getText(index);
+    }
 }
 
 function getPorcupineText(id, index, length) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    return porcupineEditor.getText(index, length);
+    if (porcupineEditor) {
+        return porcupineEditor.getText(index, length);
+    }
 }
 
 function setPorcupineText(id, text) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.setText(text, 'silent');
+    if (porcupineEditor) {
+        porcupineEditor.setText(text, 'silent');
+    }
 }
 
 function getPorcupineHTML(id) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    return porcupineEditor.root.innerHTML;
+    if (porcupineEditor) {
+        return porcupineEditor.root.innerHTML;
+    }
 }
 
 function setPorcupineHTML(id, html) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.root.innerHTML = html;
+    if (porcupineEditor) {
+        porcupineEditor.root.innerHTML = html;
+    }
 }
 
 function deletePorcupineText(id, index, length) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.deleteText(index, length, 'silent');
+    if (porcupineEditor) {
+        porcupineEditor.deleteText(index, length, 'silent');
+    }
 }
 
 function insertImageToPorcupine(id, index, imageURL) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.insertEmbed(index, 'image', imageURL, 'silent');
+    if (porcupineEditor) {
+        porcupineEditor.insertEmbed(index, 'image', imageURL, 'silent');
+    }
 }
 
 function insertTextToPorcupine(id, index, text) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.insertText(index, text, 'silent');
+    if (porcupineEditor) {
+        porcupineEditor.insertText(index, text, 'silent');
+    }
 }
 
 //EDITOR
 function clearPorcupineFocus(id) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.blur();
+    if (porcupineEditor) {
+        porcupineEditor.blur();
+    }
 }
 
 function grabPorcupineFocus(id) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.focus();
+    if (porcupineEditor) {
+        porcupineEditor.focus();
+    }
 }
 
 function isPorcupineFocused(id) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    return porcupineEditor.hasFocus();
+    if (porcupineEditor) {
+        return porcupineEditor.hasFocus();
+    }
 }
 
 function enablePorcupine(id) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.enable(true);
+    if (porcupineEditor) {
+        porcupineEditor.enable(true);
+    }
 }
 
 function disablePorcupine(id) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.enable(false);
+    if (porcupineEditor) {
+        porcupineEditor.enable(false);
+    }
 }
 
 //FORMATTING
 function formatPorcupineSelection(id, property, value) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.format(property, value, 'silent');
+    if (porcupineEditor) {
+        porcupineEditor.format(property, value, 'silent');
+    }
 }
 
 function formatPorcupineText(id, index, length, property, value) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.formatText(index, length, property, value, 'silent');
+    if (porcupineEditor) {
+        porcupineEditor.formatText(index, length, property, value, 'silent');
+    }
 }
 
 function clearPorcupineFormat(id, index, length) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.removeFormat(index, length, 'silent');
+    if (porcupineEditor) {
+        porcupineEditor.removeFormat(index, length, 'silent');
+    }
 }
 
 //SELECTION
 function getBounds(id, index) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    return porcupineEditor.getBounds(index);
+    if (porcupineEditor) {
+        return porcupineEditor.getBounds(index);
+    }
 }
 
 function getBounds(id, index, length) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    return porcupineEditor.getBounds(index, length);
+    if (porcupineEditor) {
+        return porcupineEditor.getBounds(index, length);
+    }
 }
 
 function getSelection(id) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    return porcupineEditor.getSelection();
+    if (porcupineEditor) {
+        return porcupineEditor.getSelection();
+    }
 }
 
 function setSelection(id, index, length) {
     var porcupineEditor = Quill.find(document.getElementById(id));
-    porcupineEditor.setSelection(index, length, 'silent');
+    if (porcupineEditor) {
+        porcupineEditor.setSelection(index, length, 'silent');
+    }
 }
 
 //VISIBILITY
 
 function showPorcupine(id) {
-    porcupine = document.getElementById(id);
-    porcupine.style.display = 'block';
+    var porcupine = document.getElementById(id);
+    if (porcupine) {
+        porcupine.style.display = 'block';
+    }
 }
 
 function hidePorcupine(id) {
-    porcupine = document.getElementById(id);
-    porcupine.style.display = 'none';
+    var porcupine = document.getElementById(id);
+    if (porcupine) {
+        porcupine.style.display = 'none';
+    }
 }
