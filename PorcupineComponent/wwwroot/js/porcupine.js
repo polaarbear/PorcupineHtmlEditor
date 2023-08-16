@@ -1,9 +1,9 @@
 ﻿
 //INITIALIZATION
-function startPorcupine(id, porcupineTheme, porcupineDefaultMessage, border, radius) {
+function startPorcupine(id, porcupineTheme, placeHolderMessage, border, radius) {
     new Quill('#' + id, {
         theme: porcupineTheme,
-        placeholder: porcupineDefaultMessage,
+        placeholder: placeHolderMessage,
     });
     setToolbarBorder(border, radius);
 }
@@ -23,7 +23,6 @@ function getPorcupineLength(id) {
     if (porcupineEditor) {        
         return porcupineEditor.getLength();
     }
-
 }
 
 function getPorcupineText(id) {

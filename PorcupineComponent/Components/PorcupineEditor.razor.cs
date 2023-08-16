@@ -78,7 +78,10 @@ namespace PorcupineHtmlEditor
         public string BorderRadius { get; set; } = ".25rem";
 
         [Parameter]
-        public string DefaultMessage { get; set; } = "Some porcupine quills are up to 12 inches long!";
+        public string PlaceholderText { get; set; } = "Some porcupine quills are up to 12 inches long!";
+
+        [Parameter]
+        public string InitialHTML { get; set; } = "<strong>BOLD</strong>";
 
         protected override void OnParametersSet()
         {
@@ -97,7 +100,9 @@ namespace PorcupineHtmlEditor
         {
             if (firstRender)
             {
-                await _JS!.InvokeVoidAsync("startPorcupine", new object[] { Id, ActiveTheme.ToString().ToLower(), DefaultMessage, Border, BorderRadius });
+                await _JS!.InvokeVoidAsync("startPorcupine", new object[] { Id, ActiveTheme.ToString().ToLower(), PlaceholderText, Border, BorderRadius });
+                if(!string.IsNullOrWhiteSpace(InitialHTML))
+                    await SetHTML((MarkupString)InitialHTML);
             }
         }
     }
